@@ -23,7 +23,9 @@
   (contains? raw-types (fs/extension x)))
 
 (defn dest-path [path]
-  (string/replace path "Project" "{{sanitized}}"))
+  (-> path
+      (string/replace "Project" "{{sanitized}}")
+      (string/replace "git" ".git")))
 
 (defn render-spec [f files]
   (mapv (fn [file] [(dest-path file) (f file)]) files))
