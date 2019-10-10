@@ -1,4 +1,4 @@
-(ns awesome.subs
+(ns {{name}}.subs
   (:require [re-frame.core :refer [reg-sub]]))
 
 (reg-sub

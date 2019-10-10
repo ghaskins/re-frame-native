@@ -1,4 +1,4 @@
-(ns awesome.db
+(ns {{name}}.db
   (:require [clojure.spec.alpha :as s]))
 
 ;; spec of app-db

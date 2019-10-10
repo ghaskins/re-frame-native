@@ -1,4 +1,4 @@
-(defproject AwesomeProject "0.1.0-SNAPSHOT"
+(defproject {{name}} "0.1.0-SNAPSHOT"
   :min-lein-version "2.5.3"
   :plugins [[lein-shadow "0.1.6"]]
 
@@ -16,7 +16,7 @@
   :shadow-cljs {:nrepl {:port 9000}
                 :builds {:app
                          {:target :react-native
-                          :init-fn awesome.core/init
+                          :init-fn {{name}}.core/init
                           :output-dir "target"
                           :compiler-options {:infer-externs :auto}
                           :devtools {:autoload true}}}}

@@ -1,8 +1,8 @@
-(ns awesome.events
+(ns {{name}}.events
   (:require
    [re-frame.core :refer [reg-event-db after]]
    [clojure.spec.alpha :as s]
-   [awesome.db :as db :refer [app-db]]))
+   [{{name}}.db :as db :refer [app-db]]))
 
 ;; -- Interceptors ------------------------------------------------------------
 ;;

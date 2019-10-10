@@ -1,8 +1,8 @@
-(ns awesome.core
+(ns {{name}}.core
   (:require [reagent.core :as r :refer [atom]]
             [re-frame.core :refer [subscribe dispatch dispatch-sync]]
-            [awesome.events]
-            [awesome.subs]))
+            [{{name}}.events]
+            [{{name}}.subs]))
 
 (def ReactNative (js/require "react-native"))
 
@@ -30,6 +30,6 @@
 
 (defn init []
   (dispatch-sync [:initialize-db])
-  (.registerComponent app-registry "AwesomeProject" #(r/reactify-component app-root)))
+  (.registerComponent app-registry "{{name}}" #(r/reactify-component app-root)))
 
 
