@@ -13,10 +13,10 @@
 (defn find-files
   "For a given 'dir', return a recursive list of all the filenames, relative to that dir"
   [dir]
-  (let [parent (normalize dir)]
+  (let [parent (str (subs (str dir) 5) "/")]
     (->> (fs/iterate-dir dir)
          (reduce (fn [acc [root dirs files]] (concat acc (map (fn [file] (fs/file root file)) files))) [])
-         (map (fn [x] (string/replace (normalize x) (str parent "/") ""))))))
+         (map (fn [x] (string/replace (normalize x) parent ""))))))
 
 (def raw-types #{".png" ".jar"})
 (defn raw? [x]
@@ -41,7 +41,7 @@
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}
-        template-dir (fs/file (io/resource (string/join "/" ["leiningen" "new" (sanitize prj-name)])))
+        template-dir (io/resource (string/join "/" ["leiningen" "new" (sanitize prj-name)]))
         files (find-files template-dir)
         templates (remove raw? files)
         raw-files (filter raw? files)]
