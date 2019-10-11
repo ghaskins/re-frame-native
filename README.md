@@ -1,22 +1,15 @@
 # re-frame-native
 
-A Leiningen template for FIXME.
+A [Leiningen](https://leiningen.org/) template for generating a [re-frame](https://github.com/Day8/re-frame) application on [React Native](https://facebook.github.io/react-native/) based on [shadow-cljs](https://github.com/thheller/shadow-cljs) and [lein-shadow](https://gitlab.com/nikperic/lein-shadow) 
 
 ## Usage
 
-FIXME
+```shell script 
+$ lein new re-frame-native <project-name>
+```
 
-## License
+See the generated [README.md](./resources/leiningen/new/re_frame_native/README.md) for details on how to use the resulting application
 
-Copyright © 2019 FIXME
+## Credits
 
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+This template is based on the work of many others, but in particular: [re-natal](https://github.com/drapanjanas/re-natal).  In fact, this template is more or less identical to the output of running ```re-natal init <project-name>``` but with one key distinction.  Re-natal generates re-frame code using a [figwheel](https://github.com/bhauman/lein-figwheel) based configuration, whereas this template focuses on a [shadow-cljs](https://github.com/thheller/shadow-cljs) based flow.
