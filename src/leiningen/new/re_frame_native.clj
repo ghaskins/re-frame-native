@@ -41,7 +41,7 @@
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}
-        template-dir (io/as-file (io/resource (string/join "/" ["leiningen" "new" (sanitize prj-name)])))
+        template-dir (fs/file (io/resource (string/join "/" ["leiningen" "new" (sanitize prj-name)])))
         files (find-files template-dir)
         templates (remove raw? files)
         raw-files (filter raw? files)]
